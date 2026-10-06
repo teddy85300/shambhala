@@ -3,31 +3,210 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Shambhala | Créations artisanales sur mesure</title>
 
   <meta
     name="description"
-    content="Shambhala - Créations artisanales sur mesure en bois et pierres. Pics à cheveux, baguettes magiques et créations personnalisées."
+    content="Shambhala crée des pièces artisanales sur mesure inspirées par la nature, le bois et les pierres."
   >
 
   <link rel="stylesheet" href="style.css">
+
+
+  <!-- =========================================
+       CORRECTIONS SPÉCIALES TÉLÉPHONE
+  ========================================== -->
+
+  <style>
+
+    /* Sécurité générale contre les débordements */
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+
+    /* =========================================
+       VERSION SMARTPHONE
+    ========================================== */
+
+    @media screen and (max-width: 680px) {
+
+      /* HERO */
+
+      .hero {
+        width: 100%;
+        min-height: auto;
+        padding: 75px 0 65px;
+        overflow: hidden;
+      }
+
+
+      .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+
+      /* CRÉATIONS ARTISANALES SUR MESURE */
+
+      .hero .petit-titre {
+        font-size: 0.70rem !important;
+        letter-spacing: 0.28em !important;
+        line-height: 1.8 !important;
+        padding: 0 8px;
+      }
+
+
+      /* TITRE SHAMBHALA */
+
+      .hero h1 {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin:
+          28px auto
+          25px auto !important;
+
+        padding: 0 !important;
+
+        font-size: 13.5vw !important;
+        line-height: 1 !important;
+
+        letter-spacing: -0.045em !important;
+
+        white-space: nowrap !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+      }
+
+
+      /* NATURE • PIERRES • BOIS • ARTISANAT */
+
+      .hero-sous-titre {
+        font-size: 0.70rem !important;
+        letter-spacing: 0.12em !important;
+        line-height: 1.8 !important;
+
+        padding: 0 5px;
+
+        text-align: center;
+      }
+
+
+      /* TEXTE DE PRÉSENTATION */
+
+      .hero-content > p {
+        font-size: 0.93rem !important;
+        line-height: 1.75 !important;
+
+        max-width: 340px;
+
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+      /* BOUTONS */
+
+      .hero .boutons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+
+      .hero .btn {
+        width: 100%;
+        box-sizing: border-box;
+
+        font-size: 0.76rem !important;
+
+        padding:
+          15px
+          12px !important;
+      }
+
+
+      /* TITRES DES SECTIONS */
+
+      .titre-section h2 {
+        font-size: 1.8rem;
+        line-height: 1.15;
+      }
+
+
+      /* PRÉSENTATION */
+
+      .presentation-texte h2 {
+        font-size: 1.8rem;
+        line-height: 1.15;
+      }
+
+    }
+
+
+    /* =========================================
+       PETITS SMARTPHONES
+    ========================================== */
+
+    @media screen and (max-width: 420px) {
+
+      .hero h1 {
+        font-size: 12.8vw !important;
+        letter-spacing: -0.055em !important;
+      }
+
+
+      .hero .petit-titre {
+        font-size: 0.65rem !important;
+      }
+
+
+      .hero-sous-titre {
+        font-size: 0.65rem !important;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
 
-  <!-- =========================
+
+  <!-- =========================================
        MENU
-  ========================== -->
+  ========================================== -->
 
   <header>
+
     <nav>
 
       <a href="index.html" class="logo">
         SHAMB<span>HALA</span>
       </a>
+
 
       <ul class="nav-links">
 
@@ -64,28 +243,34 @@
       </ul>
 
     </nav>
+
   </header>
 
 
-  <!-- =========================
+
+  <!-- =========================================
        ACCUEIL
-  ========================== -->
+  ========================================== -->
 
   <main class="hero">
 
     <div class="hero-content">
 
+
       <div class="petit-titre">
         Créations artisanales sur mesure
       </div>
+
 
       <h1>
         Shambhala
       </h1>
 
+
       <div class="hero-sous-titre">
         NATURE • PIERRES • BOIS • ARTISANAT
       </div>
+
 
       <p>
         Des créations façonnées à la main,
@@ -97,6 +282,7 @@
         qui vous ressemble.
       </p>
 
+
       <div class="boutons">
 
         <a
@@ -105,6 +291,7 @@
         >
           Découvrir mon univers
         </a>
+
 
         <a
           href="commande.html"
@@ -120,21 +307,24 @@
   </main>
 
 
-  <!-- =========================
-       PRESENTATION
-  ========================== -->
 
-  <section class="section section-sombre">
+  <!-- =========================================
+       PRÉSENTATION
+  ========================================== -->
+
+  <section class="section">
 
     <div class="container">
 
+
       <div class="presentation">
+
 
         <div class="presentation-photo">
 
           <img
             src="800259135_18182770324420746_8219150036893580087_n.jpg"
-            alt="Stand et créations artisanales Shambhala"
+            alt="Univers artisanal Shambhala"
           >
 
         </div>
@@ -142,37 +332,42 @@
 
         <div class="presentation-texte">
 
+
           <div class="petit-titre">
             L'univers Shambhala
           </div>
 
+
           <h2>
-            Entre nature,
-            bois et pierres
+            Des créations uniques,
+            inspirées par la nature
           </h2>
+
 
           <p>
             Shambhala est un univers de créations
-            artisanales façonnées à la main
-            et inspirées par les matières naturelles.
+            artisanales façonnées à la main.
+
+            Le bois, les pierres et les matières
+            naturelles se rencontrent pour donner
+            naissance à des pièces singulières.
           </p>
 
-          <p>
-            Les pièces présentées sur ce site
-            sont des exemples de créations déjà réalisées.
-            Elles peuvent servir d'inspiration
-            pour imaginer votre propre projet.
-          </p>
 
           <p>
-            Chaque nouvelle création est réalisée
-            sur mesure selon vos envies
-            et les matières disponibles.
+            Chaque création est réalisée
+            sur commande.
+
+            Les réalisations présentées sur le site
+            sont là pour vous inspirer et vous aider
+            à imaginer votre propre pièce.
           </p>
+
 
           <div class="signature">
-            Fait main • Sur mesure • Chaque création est différente
+            Shambhala
           </div>
+
 
         </div>
 
@@ -183,13 +378,15 @@
   </section>
 
 
-  <!-- =========================
-       CHOIX DES RUBRIQUES
-  ========================== -->
 
-  <section class="section">
+  <!-- =========================================
+       DÉCOUVRIR LE SITE
+  ========================================== -->
+
+  <section class="section section-sombre">
 
     <div class="container">
+
 
       <div class="titre-section">
 
@@ -197,22 +394,26 @@
           Explorez Shambhala
         </div>
 
+
         <h2>
           Découvrez mon univers
         </h2>
 
+
         <p>
-          Choisissez la rubrique que vous souhaitez découvrir.
-          Chaque univers possède maintenant sa propre page.
+          Parcourez les créations,
+          découvrez des réalisations déjà effectuées
+          et observez leur travail en vidéo.
         </p>
 
       </div>
 
 
+
       <div class="navigation-cartes">
 
 
-        <!-- CREATIONS -->
+        <!-- CRÉATIONS -->
 
         <a
           href="creations.html"
@@ -223,23 +424,27 @@
             ✦
           </div>
 
+
           <h3>
             Créations
           </h3>
+
 
           <p>
             Découvrez les créations proposées
             et leurs tarifs.
           </p>
 
-          <div class="decouvrir">
+
+          <span class="decouvrir">
             Découvrir →
-          </div>
+          </span>
 
         </a>
 
 
-        <!-- REALISATIONS -->
+
+        <!-- RÉALISATIONS -->
 
         <a
           href="realisations.html"
@@ -247,26 +452,30 @@
         >
 
           <div class="icone">
-            ✦
+            ◇
           </div>
+
 
           <h3>
             Réalisations
           </h3>
+
 
           <p>
             Parcourez une sélection
             de créations déjà réalisées.
           </p>
 
-          <div class="decouvrir">
+
+          <span class="decouvrir">
             Voir la galerie →
-          </div>
+          </span>
 
         </a>
 
 
-        <!-- VIDEOS -->
+
+        <!-- VIDÉOS -->
 
         <a
           href="videos.html"
@@ -277,86 +486,112 @@
             ▶
           </div>
 
+
           <h3>
             Vidéos
           </h3>
 
+
           <p>
-            Découvrez les créations en mouvement
+            Découvrez les créations
+            sous différents angles
             et observez leurs détails.
           </p>
 
-          <div class="decouvrir">
-            Voir les vidéos →
-          </div>
 
+          <span class="decouvrir">
+            Voir les vidéos →
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       CRÉATION SUR MESURE
+  ========================================== -->
+
+  <section class="cta">
+
+    <div class="container">
+
+
+      <div class="petit-titre">
+        Une création rien que pour vous
+      </div>
+
+
+      <h2>
+        Imaginons votre pièce
+      </h2>
+
+
+      <p>
+        Vous avez une idée,
+        une pierre,
+        une couleur
+        ou simplement une inspiration ?
+
+        Contactez Shambhala
+        pour imaginer ensemble
+        votre future création.
+      </p>
+
+
+      <div class="boutons">
+
+        <a
+          href="commande.html"
+          class="btn"
+        >
+          Créer ma pièce
         </a>
 
       </div>
 
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       COMMANDE
-  ========================== -->
-
-  <section class="cta section-sombre">
-
-    <div class="container">
-
-      <div class="petit-titre">
-        Votre création
-      </div>
-
-      <h2>
-        Une idée en tête ?
-      </h2>
-
-      <p>
-        Pic à cheveux, baguette magique
-        ou projet personnalisé :
-        décrivez-moi ce que vous imaginez
-        afin de donner vie à votre création.
-      </p>
-
-      <a
-        href="commande.html"
-        class="btn"
-      >
-        Demander ma création
-      </a>
 
     </div>
 
   </section>
 
 
-  <!-- =========================
+
+  <!-- =========================================
        FOOTER
-  ========================== -->
+  ========================================== -->
 
   <footer>
 
     <div class="container">
 
+
       <div class="footer-logo">
         SHAMBHALA
       </div>
+
 
       <p>
         Créations artisanales • Bois • Pierres • Sur mesure
       </p>
 
+
       <div class="footer-liens">
+
 
         <a href="mailto:Shambhalauniverse@gmail.com">
           E-mail
         </a>
 
+
         •
+
 
         <a
           href="https://www.instagram.com/shambhalauniverse?stkn=azVxcGFlYjRweXJx"
@@ -366,7 +601,9 @@
           Instagram
         </a>
 
+
         •
+
 
         <a
           href="https://www.facebook.com/profile.php?id=61575640141651"
@@ -376,15 +613,19 @@
           Facebook
         </a>
 
+
       </div>
+
 
       <p style="margin-top:15px;">
         © 2026 Shambhala — Tous droits réservés
       </p>
 
+
     </div>
 
   </footer>
+
 
 </body>
 
