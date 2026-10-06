@@ -1477,30 +1477,3 @@ footer {
   .contact-direct p {
     font-size: 0.93rem;
   }
-
-  /* Boutons plus adaptés au téléphone */
-  .btn {
-    font-size: 0.78rem;
-    padding: 13px 18px;
-  }
-
-}
-
-
-/* Très petits téléphones */
-@media (max-width: 420px) {
-
-  .hero h1 {
-    font-size: clamp(2.35rem, 13vw, 3.3rem);
-    letter-spacing: 0;
-  }
-
-  .page-hero h1 {
-    font-size: 2rem;
-  }
-
-  .titre-section h2 {
-    font-size: 1.65rem;
-  }
-
-}
