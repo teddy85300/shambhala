@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Shambhala | Créations artisanales sur mesure</title>
-  <meta name="description" content="Shambhala - Créations artisanales sur mesure en bois et pierres. Pics à cheveux, baguettes magiques et créations personnalisées.">
+
+  <meta
+    name="description"
+    content="Shambhala - Créations artisanales sur mesure en bois et pierres. Pics à cheveux, baguettes magiques et créations personnalisées."
+  >
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -32,10 +38,20 @@
 
     body {
       font-family: Georgia, "Times New Roman", serif;
+
       background:
-        radial-gradient(circle at 20% 10%, rgba(125, 82, 35, 0.13), transparent 32%),
-        radial-gradient(circle at 80% 30%, rgba(93, 65, 31, 0.11), transparent 28%),
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(125, 82, 35, 0.13),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(93, 65, 31, 0.11),
+          transparent 28%
+        ),
         var(--fond);
+
       color: var(--texte);
       line-height: 1.7;
     }
@@ -60,31 +76,43 @@
       margin: auto;
     }
 
-    /* MENU */
+
+    /* =====================================================
+       MENU
+    ===================================================== */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
+
       background: rgba(16, 13, 9, 0.95);
+
       backdrop-filter: blur(12px);
+
       border-bottom: 1px solid var(--bordure);
     }
 
     nav {
       width: min(1180px, 92%);
       min-height: 76px;
+
       margin: auto;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 25px;
     }
 
     .logo {
       color: var(--creme);
+
       font-size: 1.55rem;
+
       letter-spacing: 3px;
+
       font-weight: bold;
     }
 
@@ -94,14 +122,19 @@
 
     .nav-links {
       display: flex;
+
       list-style: none;
+
       gap: 25px;
+
       align-items: center;
     }
 
     .nav-links a {
       color: #cfc3af;
+
       font-size: 0.9rem;
+
       transition: 0.25s;
     }
 
@@ -109,92 +142,150 @@
       color: var(--or-clair);
     }
 
-    /* ACCUEIL */
+
+    /* =====================================================
+       ACCUEIL
+    ===================================================== */
 
     .hero {
       min-height: 88vh;
+
       display: flex;
+
       align-items: center;
+
       text-align: center;
+
       position: relative;
+
       overflow: hidden;
     }
 
     .hero::before {
       content: "";
+
       position: absolute;
+
       inset: 0;
+
       background:
-        radial-gradient(circle at center, rgba(156, 105, 46, 0.14), transparent 42%);
+        radial-gradient(
+          circle at center,
+          rgba(156, 105, 46, 0.14),
+          transparent 42%
+        );
+
       pointer-events: none;
     }
 
     .hero-content {
       width: min(900px, 92%);
+
       margin: auto;
+
       padding: 90px 0;
+
       position: relative;
+
       z-index: 1;
     }
 
     .petit-titre {
       color: var(--or);
+
       text-transform: uppercase;
+
       letter-spacing: 5px;
+
       font-size: 0.75rem;
+
       margin-bottom: 18px;
     }
 
     h1 {
       color: var(--creme);
+
       font-size: clamp(4rem, 10vw, 7.5rem);
+
       line-height: 0.95;
+
       font-weight: normal;
+
       letter-spacing: 2px;
+
       margin-bottom: 28px;
     }
 
     .hero-sous-titre {
       color: var(--or-clair);
+
       font-size: clamp(1rem, 2vw, 1.3rem);
+
       letter-spacing: 4px;
+
       margin-bottom: 25px;
     }
 
     .hero p {
       max-width: 720px;
+
       margin: 0 auto 36px;
+
       color: #c9bdab;
+
       font-size: 1.08rem;
     }
 
+
+    /* =====================================================
+       BOUTONS
+    ===================================================== */
+
     .boutons {
       display: flex;
+
       justify-content: center;
+
       flex-wrap: wrap;
+
       gap: 14px;
     }
 
     .btn {
       display: inline-block;
+
       padding: 14px 25px;
+
       border: 1px solid var(--or);
+
       background: var(--or);
+
       color: #171008;
+
       text-transform: uppercase;
+
       letter-spacing: 2px;
+
       font-size: 0.75rem;
+
+      font-family: inherit;
+
+      cursor: pointer;
+
       transition: 0.25s;
     }
 
     .btn:hover {
       background: var(--or-clair);
+
       border-color: var(--or-clair);
+
       transform: translateY(-2px);
     }
 
     .btn-contour {
       background: transparent;
+
       color: var(--or-clair);
     }
 
@@ -202,7 +293,10 @@
       color: #171008;
     }
 
-    /* SECTIONS */
+
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
 
     .section {
       padding: 100px 0;
@@ -210,29 +304,43 @@
 
     .section-sombre {
       background: rgba(0, 0, 0, 0.16);
-      border-top: 1px solid rgba(216, 176, 106, 0.08);
-      border-bottom: 1px solid rgba(216, 176, 106, 0.08);
+
+      border-top:
+        1px solid rgba(216, 176, 106, 0.08);
+
+      border-bottom:
+        1px solid rgba(216, 176, 106, 0.08);
     }
 
     .titre-section {
       max-width: 780px;
+
       margin: 0 auto 55px;
+
       text-align: center;
     }
 
     .titre-section .mini {
       color: var(--or);
+
       text-transform: uppercase;
+
       letter-spacing: 4px;
+
       font-size: 0.72rem;
+
       margin-bottom: 12px;
     }
 
     .titre-section h2 {
       color: var(--creme);
+
       font-size: clamp(2.2rem, 5vw, 3.5rem);
+
       line-height: 1.15;
+
       font-weight: normal;
+
       margin-bottom: 20px;
     }
 
@@ -240,12 +348,18 @@
       color: var(--texte-doux);
     }
 
-    /* PRESENTATION */
+
+    /* =====================================================
+       PRESENTATION
+    ===================================================== */
 
     .presentation {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 65px;
+
       align-items: center;
     }
 
@@ -255,122 +369,190 @@
 
     .presentation-photo img {
       width: 100%;
+
       height: 560px;
+
       object-fit: cover;
+
       border: 1px solid var(--bordure);
     }
 
     .presentation-photo::after {
       content: "";
+
       position: absolute;
+
       width: 75%;
+
       height: 75%;
+
       right: -15px;
+
       bottom: -15px;
+
       border-right: 1px solid var(--or);
+
       border-bottom: 1px solid var(--or);
+
       opacity: 0.4;
+
       pointer-events: none;
     }
 
     .presentation-texte h2 {
       color: var(--creme);
+
       font-size: clamp(2.2rem, 4vw, 3.3rem);
+
       font-weight: normal;
+
       line-height: 1.15;
+
       margin-bottom: 25px;
     }
 
     .presentation-texte p {
       color: #bdb09e;
+
       margin-bottom: 18px;
     }
 
     .signature {
       color: var(--or-clair);
+
       font-style: italic;
+
       font-size: 1.15rem;
+
       margin-top: 25px;
     }
 
-    /* CREATIONS */
+
+    /* =====================================================
+       CREATIONS
+    ===================================================== */
 
     .creation-grid {
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
+
       gap: 28px;
+
       max-width: 950px;
+
       margin: auto;
     }
 
     .creation-card {
       padding: 45px 38px;
+
       text-align: center;
-      background: linear-gradient(145deg, #241b12, var(--carte));
+
+      background:
+        linear-gradient(
+          145deg,
+          #241b12,
+          var(--carte)
+        );
+
       border: 1px solid var(--bordure);
+
       transition: 0.3s;
     }
 
     .creation-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(216, 176, 106, 0.55);
+
+      border-color:
+        rgba(216, 176, 106, 0.55);
     }
 
     .creation-card::before {
       content: "✦";
+
       display: block;
+
       color: var(--or);
+
       font-size: 1.6rem;
+
       margin-bottom: 15px;
     }
 
     .creation-card h3 {
       color: var(--creme);
+
       font-size: 1.8rem;
+
       font-weight: normal;
+
       margin-bottom: 10px;
     }
 
     .prix {
       color: var(--or-clair);
+
       font-size: 1.45rem;
+
       margin-bottom: 20px;
     }
 
     .creation-card p {
       color: var(--texte-doux);
+
       margin-bottom: 28px;
     }
 
     .important {
       max-width: 850px;
+
       margin: 40px auto 0;
+
       padding: 24px;
-      background: rgba(216, 176, 106, 0.06);
+
+      background:
+        rgba(216, 176, 106, 0.06);
+
       border-left: 2px solid var(--or);
+
       color: #c5b8a5;
     }
 
-    /* GALERIE */
+
+    /* =====================================================
+       GALERIE
+    ===================================================== */
 
     .galerie {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 18px;
     }
 
     .photo {
       position: relative;
+
       overflow: hidden;
+
       height: 420px;
+
       background: #19130e;
-      border: 1px solid rgba(216, 176, 106, 0.15);
+
+      border:
+        1px solid rgba(216, 176, 106, 0.15);
     }
 
     .photo img {
       width: 100%;
+
       height: 100%;
+
       object-fit: cover;
+
       transition: 0.5s;
     }
 
@@ -380,166 +562,426 @@
 
     .legende {
       position: absolute;
+
       left: 0;
       right: 0;
       bottom: 0;
+
       padding: 55px 20px 18px;
-      background: linear-gradient(transparent, rgba(8, 6, 4, 0.95));
+
+      background:
+        linear-gradient(
+          transparent,
+          rgba(8, 6, 4, 0.95)
+        );
+
       color: var(--creme);
     }
 
     .legende span {
       display: block;
+
       color: var(--or);
+
       text-transform: uppercase;
+
       letter-spacing: 2px;
+
       font-size: 0.7rem;
     }
 
     .note-galerie {
       max-width: 780px;
+
       margin: 35px auto 0;
+
       text-align: center;
+
       color: var(--texte-doux);
+
       font-style: italic;
     }
 
-    /* VIDEOS */
+
+    /* =====================================================
+       VIDEOS
+    ===================================================== */
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 24px;
     }
 
     .video-card {
-      background: linear-gradient(145deg, #211910, #15100b);
+      background:
+        linear-gradient(
+          145deg,
+          #211910,
+          #15100b
+        );
+
       border: 1px solid var(--bordure);
+
       overflow: hidden;
     }
 
     .video-card video {
       width: 100%;
+
       aspect-ratio: 9 / 16;
+
       max-height: 650px;
+
       object-fit: contain;
+
       background: #000;
     }
 
     .video-info {
       padding: 24px;
+
       text-align: center;
     }
 
     .video-info .numero {
       color: var(--or);
+
       text-transform: uppercase;
+
       letter-spacing: 3px;
+
       font-size: 0.68rem;
+
       margin-bottom: 7px;
     }
 
     .video-info h3 {
       color: var(--creme);
+
       font-size: 1.35rem;
+
       font-weight: normal;
+
       margin-bottom: 8px;
     }
 
     .video-info p {
       color: var(--texte-doux);
+
       font-size: 0.92rem;
     }
 
-    /* ETAPES */
+
+    /* =====================================================
+       ETAPES
+    ===================================================== */
 
     .etapes {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
       gap: 20px;
     }
 
     .etape {
       border-top: 1px solid var(--or);
+
       padding: 28px 15px 10px;
     }
 
     .etape-numero {
       color: var(--or);
+
       font-size: 0.72rem;
+
       letter-spacing: 3px;
+
       margin-bottom: 13px;
     }
 
     .etape h3 {
       color: var(--creme);
+
       font-size: 1.3rem;
+
       font-weight: normal;
+
       margin-bottom: 10px;
     }
 
     .etape p {
       color: var(--texte-doux);
+
       font-size: 0.94rem;
     }
 
-    /* SUR MESURE */
+
+    /* =====================================================
+       SUR MESURE
+    ===================================================== */
 
     .sur-mesure-box {
       max-width: 920px;
+
       margin: auto;
+
       padding: 55px;
+
       text-align: center;
+
       background:
-        linear-gradient(145deg, rgba(216,176,106,0.08), rgba(255,255,255,0.01));
+        linear-gradient(
+          145deg,
+          rgba(216,176,106,0.08),
+          rgba(255,255,255,0.01)
+        );
+
       border: 1px solid var(--bordure);
     }
 
     .sur-mesure-box h2 {
       color: var(--creme);
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+      font-size:
+        clamp(2.2rem, 5vw, 3.5rem);
+
       font-weight: normal;
+
       margin-bottom: 20px;
     }
 
     .sur-mesure-box p {
       max-width: 720px;
+
       margin: 0 auto 30px;
+
       color: #b9ac99;
     }
 
-    /* CONTACT */
+
+    /* =====================================================
+       FORMULAIRE CONTACT
+    ===================================================== */
 
     .contact {
       text-align: center;
     }
 
-    .contact p {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: var(--texte-doux);
+    .contact-formulaire {
+      max-width: 850px;
+
+      margin: 0 auto 55px;
+
+      padding: 45px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #211910,
+          #15100b
+        );
+
+      border: 1px solid var(--bordure);
+
+      text-align: left;
     }
 
-    /* FOOTER */
+    .form-groupe {
+      margin-bottom: 22px;
+    }
+
+    .form-groupe label {
+      display: block;
+
+      color: var(--or-clair);
+
+      margin-bottom: 8px;
+
+      font-size: 0.95rem;
+    }
+
+    .form-groupe input,
+    .form-groupe select,
+    .form-groupe textarea {
+      width: 100%;
+
+      padding: 14px;
+
+      background: #100d09;
+
+      border: 1px solid var(--bordure);
+
+      color: var(--creme);
+
+      font-family: inherit;
+
+      font-size: 1rem;
+
+      outline: none;
+
+      transition: 0.25s;
+    }
+
+    .form-groupe textarea {
+      resize: vertical;
+
+      min-height: 160px;
+    }
+
+    .form-groupe input:focus,
+    .form-groupe select:focus,
+    .form-groupe textarea:focus {
+      border-color: var(--or);
+    }
+
+    .form-groupe select option {
+      background: #100d09;
+
+      color: var(--creme);
+    }
+
+    .form-bouton {
+      text-align: center;
+
+      margin-top: 30px;
+    }
+
+
+    /* =====================================================
+       CONTACT DIRECT
+    ===================================================== */
+
+    .contact-direct {
+      max-width: 850px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .contact-direct h3 {
+      color: var(--creme);
+
+      font-size: 2rem;
+
+      font-weight: normal;
+
+      margin-bottom: 12px;
+    }
+
+    .contact-direct > p {
+      color: var(--texte-doux);
+
+      max-width: 650px;
+
+      margin: 0 auto 30px;
+    }
+
+    .reseaux {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 16px;
+
+      margin-top: 30px;
+    }
+
+    .reseau {
+      display: block;
+
+      padding: 25px 15px;
+
+      background:
+        rgba(216, 176, 106, 0.05);
+
+      border: 1px solid var(--bordure);
+
+      transition: 0.25s;
+    }
+
+    .reseau:hover {
+      background:
+        rgba(216, 176, 106, 0.11);
+
+      border-color: var(--or);
+
+      transform: translateY(-3px);
+    }
+
+    .reseau strong {
+      display: block;
+
+      color: var(--or-clair);
+
+      font-size: 1.1rem;
+
+      margin-bottom: 6px;
+    }
+
+    .reseau span {
+      color: var(--texte-doux);
+
+      font-size: 0.85rem;
+
+      overflow-wrap: anywhere;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer {
       padding: 42px 0;
+
       border-top: 1px solid var(--bordure);
+
       text-align: center;
+
       color: #817563;
+
       font-size: 0.86rem;
     }
 
     .footer-logo {
       color: var(--or-clair);
+
       letter-spacing: 4px;
+
       font-size: 1.15rem;
+
       margin-bottom: 8px;
     }
 
-    /* TELEPHONE / TABLETTE */
+    .footer-liens {
+      margin-top: 15px;
+    }
+
+    .footer-liens a {
+      color: var(--or-clair);
+
+      margin: 0 8px;
+    }
+
+    .footer-liens a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =====================================================
+       TABLETTE
+    ===================================================== */
 
     @media (max-width: 900px) {
+
       .nav-links {
         gap: 14px;
       }
@@ -553,29 +995,46 @@
       }
 
       .galerie {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
       .video-grid {
         grid-template-columns: 1fr;
+
         max-width: 520px;
+
         margin: auto;
       }
 
       .etapes {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .reseaux {
+        grid-template-columns: 1fr;
       }
     }
 
+
+    /* =====================================================
+       TELEPHONE
+    ===================================================== */
+
     @media (max-width: 680px) {
+
       nav {
         flex-direction: column;
+
         padding: 15px 0;
       }
 
       .nav-links {
         justify-content: center;
+
         flex-wrap: wrap;
+
         gap: 8px 15px;
       }
 
@@ -608,16 +1067,26 @@
       .presentation-photo img {
         height: 430px;
       }
+
+      .contact-formulaire {
+        padding: 30px 20px;
+      }
     }
+
   </style>
+
 </head>
 
 
 <body>
 
-  <!-- MENU -->
+
+  <!-- =====================================================
+       MENU
+  ====================================================== -->
 
   <header>
+
     <nav>
 
       <a href="#accueil" class="logo">
@@ -625,21 +1094,46 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#creations">Créations</a></li>
-        <li><a href="#realisations">Réalisations</a></li>
-        <li><a href="#videos">Vidéos</a></li>
-        <li><a href="#sur-mesure">Sur mesure</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <a href="#accueil">Accueil</a>
+        </li>
+
+        <li>
+          <a href="#creations">Créations</a>
+        </li>
+
+        <li>
+          <a href="#realisations">Réalisations</a>
+        </li>
+
+        <li>
+          <a href="#videos">Vidéos</a>
+        </li>
+
+        <li>
+          <a href="#sur-mesure">Sur mesure</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
       </ul>
 
     </nav>
+
   </header>
 
 
-  <!-- ACCUEIL -->
+  <!-- =====================================================
+       ACCUEIL
+  ====================================================== -->
 
-  <main id="accueil" class="hero">
+  <main
+    id="accueil"
+    class="hero"
+  >
 
     <div class="hero-content">
 
@@ -647,25 +1141,37 @@
         Créations artisanales sur mesure
       </div>
 
-      <h1>Shambhala</h1>
+      <h1>
+        Shambhala
+      </h1>
 
       <div class="hero-sous-titre">
         NATURE • PIERRES • BOIS • ARTISANAT
       </div>
 
       <p>
-        Des créations façonnées à la main, inspirées par la nature,
-        le bois et l'univers minéral. Chaque pièce est réalisée
-        sur mesure pour donner naissance à une création qui vous ressemble.
+        Des créations façonnées à la main,
+        inspirées par la nature,
+        le bois et l'univers minéral.
+
+        Chaque pièce est réalisée sur mesure
+        pour donner naissance à une création
+        qui vous ressemble.
       </p>
 
       <div class="boutons">
 
-        <a href="#realisations" class="btn">
+        <a
+          href="#realisations"
+          class="btn"
+        >
           Découvrir les réalisations
         </a>
 
-        <a href="#sur-mesure" class="btn btn-contour">
+        <a
+          href="#sur-mesure"
+          class="btn btn-contour"
+        >
           Créer ma pièce
         </a>
 
@@ -676,7 +1182,9 @@
   </main>
 
 
-  <!-- PRESENTATION -->
+  <!-- =====================================================
+       PRESENTATION SHAMBHALA
+  ====================================================== -->
 
   <section class="section section-sombre">
 
@@ -701,28 +1209,38 @@
           </div>
 
           <h2>
-            Des créations qui prennent vie entre bois et pierre
+            Des créations qui prennent vie
+            entre bois et pierre
           </h2>
 
           <p>
-            Shambhala est un univers de créations artisanales réalisées
-            à la main, inspirées par la nature et les matières brutes.
+            Shambhala est un univers de créations
+            artisanales réalisées à la main,
+            inspirées par la nature et les matières brutes.
           </p>
 
           <p>
-            Les créations présentées sur ce site sont des exemples
-            de réalisations déjà effectuées. Elles permettent de découvrir
-            mon travail et peuvent servir d'inspiration pour votre propre projet.
+            Les créations présentées sur ce site
+            sont des exemples de réalisations déjà effectuées.
+
+            Elles permettent de découvrir mon travail
+            et peuvent servir d'inspiration
+            pour votre propre projet.
           </p>
 
           <p>
-            Chaque nouvelle commande est réalisée sur mesure.
-            Les formes, les couleurs, les pierres et les détails
-            peuvent donc varier selon vos envies et les matières disponibles.
+            Chaque nouvelle commande est réalisée
+            sur mesure.
+
+            Les formes, les couleurs,
+            les pierres et les détails
+            peuvent donc varier selon vos envies
+            et les matières disponibles.
           </p>
 
           <div class="signature">
-            Fait main • Sur mesure • Chaque création est différente
+            Fait main • Sur mesure •
+            Chaque création est différente
           </div>
 
         </div>
@@ -734,9 +1252,14 @@
   </section>
 
 
-  <!-- CREATIONS SUR MESURE -->
+  <!-- =====================================================
+       CREATIONS SUR MESURE
+  ====================================================== -->
 
-  <section id="creations" class="section">
+  <section
+    id="creations"
+    class="section"
+  >
 
     <div class="container">
 
@@ -751,8 +1274,11 @@
         </h2>
 
         <p>
-          Choisissez le type de création qui vous intéresse.
-          Nous définirons ensuite ensemble les détails de votre projet.
+          Choisissez le type de création
+          qui vous intéresse.
+
+          Nous définirons ensuite ensemble
+          les détails de votre projet.
         </p>
 
       </div>
@@ -765,42 +1291,58 @@
 
         <article class="creation-card">
 
-          <h3>Pic à cheveux</h3>
+          <h3>
+            Pic à cheveux
+          </h3>
 
           <div class="prix">
             25 €
           </div>
 
           <p>
-            Un pic à cheveux artisanal façonné à la main.
-            Votre création est réalisée spécialement selon le style
-            et l'univers souhaités.
+            Un pic à cheveux artisanal
+            façonné à la main.
+
+            Votre création est réalisée spécialement
+            selon le style et l'univers souhaités.
           </p>
 
-          <a href="#sur-mesure" class="btn">
+          <a
+            href="#contact"
+            class="btn"
+          >
             Commander sur mesure
           </a>
 
         </article>
 
 
-        <!-- BAGUETTE -->
+        <!-- BAGUETTE MAGIQUE -->
 
         <article class="creation-card">
 
-          <h3>Baguette magique</h3>
+          <h3>
+            Baguette magique
+          </h3>
 
           <div class="prix">
             45 €
           </div>
 
           <p>
-            Une baguette artisanale créée spécialement pour vous.
-            Chaque réalisation possède sa propre forme,
-            son caractère et ses particularités.
+            Une baguette artisanale créée
+            spécialement pour vous.
+
+            Chaque réalisation possède
+            sa propre forme,
+            son caractère
+            et ses particularités.
           </p>
 
-          <a href="#sur-mesure" class="btn">
+          <a
+            href="#contact"
+            class="btn"
+          >
             Commander sur mesure
           </a>
 
@@ -812,11 +1354,16 @@
       <div class="important">
 
         <strong>À savoir :</strong>
-        les photographies et vidéos présentées sur ce site montrent
-        des exemples de créations déjà réalisées.
 
-        Elles ne correspondent pas à des articles fabriqués en série.
-        Votre création sera réalisée spécialement pour vous.
+        les photographies et vidéos présentées
+        sur ce site montrent des exemples
+        de créations déjà réalisées.
+
+        Elles ne correspondent pas
+        à des articles fabriqués en série.
+
+        Votre création sera réalisée
+        spécialement pour vous.
 
       </div>
 
@@ -825,9 +1372,14 @@
   </section>
 
 
-  <!-- GALERIE -->
+  <!-- =====================================================
+       GALERIE DE REALISATIONS
+  ====================================================== -->
 
-  <section id="realisations" class="section section-sombre">
+  <section
+    id="realisations"
+    class="section section-sombre"
+  >
 
     <div class="container">
 
@@ -842,8 +1394,11 @@
         </h2>
 
         <p>
-          Découvrez quelques exemples de créations Shambhala.
-          Elles témoignent du travail artisanal et peuvent vous inspirer
+          Découvrez quelques exemples
+          de créations Shambhala.
+
+          Elles témoignent du travail artisanal
+          et peuvent vous inspirer
           pour imaginer votre future création.
         </p>
 
@@ -862,8 +1417,13 @@
           >
 
           <div class="legende">
-            <span>Réalisation</span>
+
+            <span>
+              Réalisation
+            </span>
+
             Pics à cheveux artisanaux
+
           </div>
 
         </div>
@@ -878,8 +1438,13 @@
           >
 
           <div class="legende">
-            <span>Réalisation</span>
+
+            <span>
+              Réalisation
+            </span>
+
             Bois & pierres
+
           </div>
 
         </div>
@@ -894,8 +1459,13 @@
           >
 
           <div class="legende">
-            <span>Détail</span>
+
+            <span>
+              Détail
+            </span>
+
             Travail artisanal
+
           </div>
 
         </div>
@@ -910,8 +1480,13 @@
           >
 
           <div class="legende">
-            <span>Réalisation</span>
+
+            <span>
+              Réalisation
+            </span>
+
             Création en bois
+
           </div>
 
         </div>
@@ -926,8 +1501,13 @@
           >
 
           <div class="legende">
-            <span>Réalisation</span>
+
+            <span>
+              Réalisation
+            </span>
+
             Pièce façonnée à la main
+
           </div>
 
         </div>
@@ -942,8 +1522,13 @@
           >
 
           <div class="legende">
-            <span>Réalisation</span>
+
+            <span>
+              Réalisation
+            </span>
+
             Bois & univers minéral
+
           </div>
 
         </div>
@@ -952,9 +1537,14 @@
 
 
       <p class="note-galerie">
-        Ces créations sont présentées à titre d'exemple.
-        Chaque nouvelle pièce est réalisée spécialement
-        en fonction du projet et des matières disponibles.
+
+        Ces créations sont présentées
+        à titre d'exemple.
+
+        Chaque nouvelle pièce est réalisée
+        spécialement en fonction du projet
+        et des matières disponibles.
+
       </p>
 
     </div>
@@ -962,9 +1552,14 @@
   </section>
 
 
-  <!-- VIDEOS -->
+  <!-- =====================================================
+       VIDEOS
+  ====================================================== -->
 
-  <section id="videos" class="section">
+  <section
+    id="videos"
+    class="section"
+  >
 
     <div class="container">
 
@@ -975,13 +1570,16 @@
         </div>
 
         <h2>
-          Découvrez les créations sous tous les angles
+          Découvrez les créations
+          sous tous les angles
         </h2>
 
         <p>
-          Les vidéos permettent de mieux apprécier la taille,
-          les formes, les détails du bois, les pierres
-          et les finitions de différentes réalisations Shambhala.
+          Les vidéos permettent de mieux apprécier
+          la taille, les formes,
+          les détails du bois,
+          les pierres et les finitions
+          de différentes réalisations Shambhala.
         </p>
 
       </div>
@@ -994,9 +1592,19 @@
 
         <article class="video-card">
 
-          <video controls playsinline preload="metadata">
-            <source src="28631.mp4" type="video/mp4">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+          >
+
+            <source
+              src="28631.mp4"
+              type="video/mp4"
+            >
+
             Votre navigateur ne peut pas lire cette vidéo.
+
           </video>
 
           <div class="video-info">
@@ -1011,7 +1619,8 @@
 
             <p>
               Découvrez cette réalisation en vidéo
-              afin d'en observer les proportions et les détails.
+              afin d'en observer
+              les proportions et les détails.
             </p>
 
           </div>
@@ -1023,9 +1632,19 @@
 
         <article class="video-card">
 
-          <video controls playsinline preload="metadata">
-            <source src="28635.mp4" type="video/mp4">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+          >
+
+            <source
+              src="28635.mp4"
+              type="video/mp4"
+            >
+
             Votre navigateur ne peut pas lire cette vidéo.
+
           </video>
 
           <div class="video-info">
@@ -1039,8 +1658,9 @@
             </h3>
 
             <p>
-              Une présentation permettant de découvrir
-              la création sous différents angles.
+              Une présentation permettant
+              de découvrir la création
+              sous différents angles.
             </p>
 
           </div>
@@ -1052,9 +1672,19 @@
 
         <article class="video-card">
 
-          <video controls playsinline preload="metadata">
-            <source src="28636.mp4" type="video/mp4">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+          >
+
+            <source
+              src="28636.mp4"
+              type="video/mp4"
+            >
+
             Votre navigateur ne peut pas lire cette vidéo.
+
           </video>
 
           <div class="video-info">
@@ -1068,8 +1698,9 @@
             </h3>
 
             <p>
-              Une autre réalisation Shambhala présentée
-              pour mieux apprécier ses dimensions et ses finitions.
+              Une autre réalisation Shambhala
+              présentée pour mieux apprécier
+              ses dimensions et ses finitions.
             </p>
 
           </div>
@@ -1083,7 +1714,9 @@
   </section>
 
 
-  <!-- COMMENT COMMANDER -->
+  <!-- =====================================================
+       COMMENT COMMANDER
+  ====================================================== -->
 
   <section class="section section-sombre">
 
@@ -1116,7 +1749,8 @@
           </h3>
 
           <p>
-            Choisissez le type de création que vous souhaitez faire réaliser.
+            Choisissez le type de création
+            que vous souhaitez faire réaliser.
           </p>
 
         </div>
@@ -1133,8 +1767,10 @@
           </h3>
 
           <p>
-            Expliquez vos envies, vos couleurs,
-            votre style et l'inspiration recherchée.
+            Expliquez vos envies,
+            vos couleurs,
+            votre style
+            et l'inspiration recherchée.
           </p>
 
         </div>
@@ -1151,7 +1787,8 @@
           </h3>
 
           <p>
-            Votre pièce est ensuite façonnée artisanalement
+            Votre pièce est ensuite
+            façonnée artisanalement
             et spécialement pour vous.
           </p>
 
@@ -1182,9 +1819,14 @@
   </section>
 
 
-  <!-- SUR MESURE -->
+  <!-- =====================================================
+       SUR MESURE
+  ====================================================== -->
 
-  <section id="sur-mesure" class="section">
+  <section
+    id="sur-mesure"
+    class="section"
+  >
 
     <div class="container">
 
@@ -1199,15 +1841,22 @@
         </h2>
 
         <p>
-          Vous avez découvert une réalisation qui vous inspire ?
-          Vous souhaitez une couleur, une pierre, une forme
+          Vous avez découvert une réalisation
+          qui vous inspire ?
+
+          Vous souhaitez une couleur,
+          une pierre,
+          une forme
           ou une ambiance particulière ?
 
-          Contactez-moi afin que nous définissions ensemble
-          votre projet personnalisé.
+          Contactez-moi afin que nous définissions
+          ensemble votre projet personnalisé.
         </p>
 
-        <a href="#contact" class="btn">
+        <a
+          href="#contact"
+          class="btn"
+        >
           Demander ma création
         </a>
 
@@ -1218,49 +1867,246 @@
   </section>
 
 
-  <!-- CONTACT -->
+  <!-- =====================================================
+       CONTACT ET COMMANDE
+  ====================================================== -->
 
-  <section id="contact" class="section section-sombre">
+  <section
+    id="contact"
+    class="section section-sombre"
+  >
 
     <div class="container contact">
+
 
       <div class="titre-section">
 
         <div class="mini">
-          Contact
+          Contact & commande sur mesure
         </div>
 
         <h2>
-          Parlons de votre projet
+          Parlons de votre création
         </h2>
 
         <p>
-          Pour une création sur mesure, indiquez le type
-          de création souhaité ainsi que vos idées,
-          vos préférences et vos inspirations.
+          Vous souhaitez commander
+          une création Shambhala ?
+
+          Remplissez votre demande ci-dessous
+          en m'expliquant vos envies.
+
+          Votre messagerie s'ouvrira ensuite
+          avec votre demande déjà préparée.
         </p>
 
       </div>
 
 
-      <!--
-        PROCHAINE ETAPE :
-        nous ajouterons ici tes coordonnées,
-        tes réseaux sociaux et le système permettant
-        de passer une vraie commande.
-      -->
+      <!-- FORMULAIRE -->
+
+      <div class="contact-formulaire">
+
+        <form id="commandeForm">
 
 
-      <a href="#creations" class="btn">
-        Voir les créations
-      </a>
+          <!-- NOM -->
+
+          <div class="form-groupe">
+
+            <label for="nom">
+              Votre nom *
+            </label>
+
+            <input
+              type="text"
+              id="nom"
+              required
+              placeholder="Votre nom"
+            >
+
+          </div>
+
+
+          <!-- EMAIL -->
+
+          <div class="form-groupe">
+
+            <label for="email">
+              Votre adresse e-mail *
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="exemple@email.com"
+            >
+
+          </div>
+
+
+          <!-- CREATION -->
+
+          <div class="form-groupe">
+
+            <label for="creation">
+              Création souhaitée *
+            </label>
+
+            <select
+              id="creation"
+              required
+            >
+
+              <option value="">
+                Choisissez une création
+              </option>
+
+              <option value="Pic à cheveux - 25 €">
+                Pic à cheveux — 25 €
+              </option>
+
+              <option value="Baguette magique - 45 €">
+                Baguette magique — 45 €
+              </option>
+
+              <option value="Autre demande personnalisée">
+                Autre demande personnalisée
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- DESCRIPTION -->
+
+          <div class="form-groupe">
+
+            <label for="message">
+              Décrivez votre création *
+            </label>
+
+            <textarea
+              id="message"
+              required
+              placeholder="Expliquez ici votre projet : couleurs, pierre souhaitée, style, forme, dimensions, inspiration..."
+            ></textarea>
+
+          </div>
+
+
+          <!-- BOUTON -->
+
+          <div class="form-bouton">
+
+            <button
+              type="submit"
+              class="btn"
+            >
+              Envoyer ma demande
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+
+      <!-- CONTACT DIRECT -->
+
+      <div class="contact-direct">
+
+        <div class="petit-titre">
+          Retrouvez Shambhala
+        </div>
+
+        <h3>
+          Restons en contact
+        </h3>
+
+        <p>
+          Vous pouvez également me contacter
+          directement par e-mail
+          ou découvrir l'univers Shambhala
+          sur Instagram et Facebook.
+        </p>
+
+
+        <div class="reseaux">
+
+
+          <!-- EMAIL -->
+
+          <a
+            class="reseau"
+            href="mailto:Shambhalauniverse@gmail.com"
+          >
+
+            <strong>
+              ✉ E-mail
+            </strong>
+
+            <span>
+              Shambhalauniverse@gmail.com
+            </span>
+
+          </a>
+
+
+          <!-- INSTAGRAM -->
+
+          <a
+            class="reseau"
+            href="https://www.instagram.com/shambhalauniverse?stkn=azVxcGFlYjRweXJx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <strong>
+              Instagram
+            </strong>
+
+            <span>
+              @shambhalauniverse
+            </span>
+
+          </a>
+
+
+          <!-- FACEBOOK -->
+
+          <a
+            class="reseau"
+            href="https://www.facebook.com/profile.php?id=61575640141651"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <strong>
+              Facebook
+            </strong>
+
+            <span>
+              Shambhala
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- PIED DE PAGE -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
   <footer>
 
@@ -1271,10 +2117,41 @@
       </div>
 
       <p>
-        Créations artisanales • Bois • Pierres • Sur mesure
+        Créations artisanales •
+        Bois • Pierres • Sur mesure
       </p>
 
-      <p>
+      <div class="footer-liens">
+
+        <a
+          href="mailto:Shambhalauniverse@gmail.com"
+        >
+          E-mail
+        </a>
+
+        •
+
+        <a
+          href="https://www.instagram.com/shambhalauniverse?stkn=azVxcGFlYjRweXJx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        •
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61575640141651"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+      </div>
+
+      <p style="margin-top:15px;">
         © 2026 Shambhala — Tous droits réservés
       </p>
 
@@ -1283,5 +2160,80 @@
   </footer>
 
 
+  <!-- =====================================================
+       SCRIPT DU FORMULAIRE
+  ====================================================== -->
+
+  <script>
+
+    const formulaire =
+      document.getElementById("commandeForm");
+
+
+    formulaire.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+
+        const nom =
+          document.getElementById("nom").value.trim();
+
+
+        const email =
+          document.getElementById("email").value.trim();
+
+
+        const creation =
+          document.getElementById("creation").value;
+
+
+        const message =
+          document.getElementById("message").value.trim();
+
+
+        const sujet =
+          "Demande de création sur mesure Shambhala - "
+          + creation;
+
+
+        const corps =
+`Bonjour,
+
+Je souhaite faire réaliser une création Shambhala sur mesure.
+
+Nom :
+${nom}
+
+Adresse e-mail :
+${email}
+
+Création souhaitée :
+${creation}
+
+Description de mon projet :
+${message}
+
+Merci.`;
+
+
+        const lienEmail =
+          "mailto:Shambhalauniverse@gmail.com"
+          + "?subject="
+          + encodeURIComponent(sujet)
+          + "&body="
+          + encodeURIComponent(corps);
+
+
+        window.location.href = lienEmail;
+
+      }
+    );
+
+  </script>
+
+
 </body>
+
 </html>
