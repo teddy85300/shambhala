@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Shambhala | Créations artisanales</title>
+  <title>Shambhala | Créations artisanales sur mesure</title>
+  <meta name="description" content="Shambhala - Créations artisanales sur mesure en bois et pierres. Pics à cheveux, baguettes magiques et créations personnalisées.">
 
   <style>
     * {
@@ -17,11 +18,46 @@
       scroll-behavior: smooth;
     }
 
+    :root {
+      --fond: #100d09;
+      --fond-clair: #18120c;
+      --carte: #1d1710;
+      --or: #d8b06a;
+      --or-clair: #f0d29b;
+      --creme: #f4ead8;
+      --texte: #d8cdbb;
+      --texte-doux: #a99b87;
+      --bordure: rgba(216, 176, 106, 0.24);
+    }
+
     body {
       font-family: Georgia, "Times New Roman", serif;
-      background: #120d09;
-      color: #f5ead7;
-      line-height: 1.6;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(125, 82, 35, 0.13), transparent 32%),
+        radial-gradient(circle at 80% 30%, rgba(93, 65, 31, 0.11), transparent 28%),
+        var(--fond);
+      color: var(--texte);
+      line-height: 1.7;
+    }
+
+    img,
+    video {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
     }
 
     /* MENU */
@@ -30,43 +66,47 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(18, 13, 9, 0.96);
-      border-bottom: 1px solid rgba(213, 174, 109, 0.25);
+      background: rgba(16, 13, 9, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--bordure);
     }
 
     nav {
-      max-width: 1200px;
-      margin: auto;
+      width: min(1180px, 92%);
       min-height: 76px;
-      padding: 0 25px;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 25px;
     }
 
     .logo {
-      color: #e4c28c;
-      font-size: 30px;
-      letter-spacing: 2px;
-      text-decoration: none;
+      color: var(--creme);
+      font-size: 1.55rem;
+      letter-spacing: 3px;
+      font-weight: bold;
     }
 
-    .menu {
+    .logo span {
+      color: var(--or);
+    }
+
+    .nav-links {
       display: flex;
-      gap: 28px;
       list-style: none;
+      gap: 25px;
+      align-items: center;
     }
 
-    .menu a {
-      color: #f5ead7;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      letter-spacing: 1px;
+    .nav-links a {
+      color: #cfc3af;
+      font-size: 0.9rem;
+      transition: 0.25s;
     }
 
-    .menu a:hover {
-      color: #d8ae6d;
+    .nav-links a:hover {
+      color: var(--or-clair);
     }
 
     /* ACCUEIL */
@@ -75,377 +115,708 @@
       min-height: 88vh;
       display: flex;
       align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background:
-        radial-gradient(circle at center, rgba(104, 65, 31, 0.34), transparent 55%),
-        linear-gradient(180deg, #1b120c 0%, #100c09 100%);
+        radial-gradient(circle at center, rgba(156, 105, 46, 0.14), transparent 42%);
+      pointer-events: none;
     }
 
     .hero-content {
-      max-width: 850px;
+      width: min(900px, 92%);
+      margin: auto;
+      padding: 90px 0;
+      position: relative;
+      z-index: 1;
     }
 
-    .hero-small {
-      color: #d3aa6c;
+    .petit-titre {
+      color: var(--or);
       text-transform: uppercase;
       letter-spacing: 5px;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      margin-bottom: 20px;
+      font-size: 0.75rem;
+      margin-bottom: 18px;
     }
 
-    .hero h1 {
-      font-size: clamp(62px, 11vw, 125px);
-      font-weight: normal;
-      color: #f1d9ad;
+    h1 {
+      color: var(--creme);
+      font-size: clamp(4rem, 10vw, 7.5rem);
       line-height: 0.95;
-      margin-bottom: 20px;
-      text-shadow: 0 5px 25px rgba(0,0,0,.7);
-    }
-
-    .hero h2 {
       font-weight: normal;
-      font-size: clamp(20px, 3vw, 30px);
-      color: #d8b982;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       margin-bottom: 28px;
     }
 
+    .hero-sous-titre {
+      color: var(--or-clair);
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      letter-spacing: 4px;
+      margin-bottom: 25px;
+    }
+
     .hero p {
-      max-width: 650px;
-      margin: 0 auto 38px;
-      color: #dfd0bd;
-      font-size: 18px;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      color: #c9bdab;
+      font-size: 1.08rem;
+    }
+
+    .boutons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     .btn {
       display: inline-block;
-      background: #c89b5b;
-      color: #160f0a;
-      padding: 15px 30px;
-      border-radius: 3px;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: .25s;
+      padding: 14px 25px;
+      border: 1px solid var(--or);
+      background: var(--or);
+      color: #171008;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      transition: 0.25s;
     }
 
     .btn:hover {
-      background: #e0bd83;
+      background: var(--or-clair);
+      border-color: var(--or-clair);
       transform: translateY(-2px);
+    }
+
+    .btn-contour {
+      background: transparent;
+      color: var(--or-clair);
+    }
+
+    .btn-contour:hover {
+      color: #171008;
     }
 
     /* SECTIONS */
 
-    section {
-      padding: 95px 20px;
+    .section {
+      padding: 100px 0;
     }
 
-    .container {
-      max-width: 1150px;
-      margin: auto;
+    .section-sombre {
+      background: rgba(0, 0, 0, 0.16);
+      border-top: 1px solid rgba(216, 176, 106, 0.08);
+      border-bottom: 1px solid rgba(216, 176, 106, 0.08);
     }
 
-    .section-title {
+    .titre-section {
+      max-width: 780px;
+      margin: 0 auto 55px;
       text-align: center;
-      margin-bottom: 55px;
     }
 
-    .section-title span {
-      display: block;
-      color: #c99d61;
-      font-family: Arial, sans-serif;
+    .titre-section .mini {
+      color: var(--or);
       text-transform: uppercase;
-      font-size: 12px;
       letter-spacing: 4px;
-      margin-bottom: 10px;
-    }
-
-    .section-title h2 {
-      color: #f0d7ab;
-      font-size: clamp(36px, 5vw, 55px);
-      font-weight: normal;
-    }
-
-    .section-title p {
-      max-width: 680px;
-      margin: 15px auto 0;
-      color: #bcae9e;
-    }
-
-    /* CREATIONS */
-
-    .creations {
-      background: #18100b;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .card {
-      min-height: 390px;
-      border: 1px solid rgba(214, 176, 112, 0.25);
-      background:
-        radial-gradient(circle at top, rgba(112, 74, 42, .45), transparent 55%),
-        #21160f;
-      padding: 35px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      transition: .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #c99d61;
-    }
-
-    .card-number {
-      color: #c89b5b;
-      font-size: 14px;
-      font-family: Arial, sans-serif;
-      margin-bottom: auto;
-    }
-
-    .card h3 {
-      color: #f0d7ab;
-      font-size: 28px;
-      font-weight: normal;
+      font-size: 0.72rem;
       margin-bottom: 12px;
     }
 
-    .card p {
-      color: #baa996;
-    }
-
-    /* ARTISANAT */
-
-    .artisanat {
-      background: #100c09;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 45px;
-      text-align: center;
-    }
-
-    .feature-icon {
-      width: 75px;
-      height: 75px;
-      margin: 0 auto 20px;
-      border: 1px solid #c99d61;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      color: #d8ae6d;
-    }
-
-    .feature h3 {
-      color: #e7c995;
-      font-size: 21px;
-      margin-bottom: 10px;
-      font-weight: normal;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .feature p {
-      color: #ad9f91;
-    }
-
-    /* SUR MESURE */
-
-    .sur-mesure {
-      background:
-        radial-gradient(circle at center, rgba(99, 60, 29, .3), transparent 60%),
-        #1b120c;
-      text-align: center;
-    }
-
-    .sur-mesure .container {
-      max-width: 800px;
-    }
-
-    .sur-mesure h2 {
-      color: #efd6a9;
-      font-size: clamp(38px, 6vw, 60px);
+    .titre-section h2 {
+      color: var(--creme);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.15;
       font-weight: normal;
       margin-bottom: 20px;
     }
 
-    .sur-mesure p {
-      color: #c7b8a5;
-      margin-bottom: 32px;
-      font-size: 18px;
+    .titre-section p {
+      color: var(--texte-doux);
+    }
+
+    /* PRESENTATION */
+
+    .presentation {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .presentation-photo {
+      position: relative;
+    }
+
+    .presentation-photo img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      border: 1px solid var(--bordure);
+    }
+
+    .presentation-photo::after {
+      content: "";
+      position: absolute;
+      width: 75%;
+      height: 75%;
+      right: -15px;
+      bottom: -15px;
+      border-right: 1px solid var(--or);
+      border-bottom: 1px solid var(--or);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .presentation-texte h2 {
+      color: var(--creme);
+      font-size: clamp(2.2rem, 4vw, 3.3rem);
+      font-weight: normal;
+      line-height: 1.15;
+      margin-bottom: 25px;
+    }
+
+    .presentation-texte p {
+      color: #bdb09e;
+      margin-bottom: 18px;
+    }
+
+    .signature {
+      color: var(--or-clair);
+      font-style: italic;
+      font-size: 1.15rem;
+      margin-top: 25px;
+    }
+
+    /* CREATIONS */
+
+    .creation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .creation-card {
+      padding: 45px 38px;
+      text-align: center;
+      background: linear-gradient(145deg, #241b12, var(--carte));
+      border: 1px solid var(--bordure);
+      transition: 0.3s;
+    }
+
+    .creation-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(216, 176, 106, 0.55);
+    }
+
+    .creation-card::before {
+      content: "✦";
+      display: block;
+      color: var(--or);
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    .creation-card h3 {
+      color: var(--creme);
+      font-size: 1.8rem;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .prix {
+      color: var(--or-clair);
+      font-size: 1.45rem;
+      margin-bottom: 20px;
+    }
+
+    .creation-card p {
+      color: var(--texte-doux);
+      margin-bottom: 28px;
+    }
+
+    .important {
+      max-width: 850px;
+      margin: 40px auto 0;
+      padding: 24px;
+      background: rgba(216, 176, 106, 0.06);
+      border-left: 2px solid var(--or);
+      color: #c5b8a5;
+    }
+
+    /* GALERIE */
+
+    .galerie {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      height: 420px;
+      background: #19130e;
+      border: 1px solid rgba(216, 176, 106, 0.15);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .photo:hover img {
+      transform: scale(1.04);
+    }
+
+    .legende {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 55px 20px 18px;
+      background: linear-gradient(transparent, rgba(8, 6, 4, 0.95));
+      color: var(--creme);
+    }
+
+    .legende span {
+      display: block;
+      color: var(--or);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.7rem;
+    }
+
+    .note-galerie {
+      max-width: 780px;
+      margin: 35px auto 0;
+      text-align: center;
+      color: var(--texte-doux);
+      font-style: italic;
+    }
+
+    /* VIDEOS */
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .video-card {
+      background: linear-gradient(145deg, #211910, #15100b);
+      border: 1px solid var(--bordure);
+      overflow: hidden;
+    }
+
+    .video-card video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      max-height: 650px;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .video-info {
+      padding: 24px;
+      text-align: center;
+    }
+
+    .video-info .numero {
+      color: var(--or);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.68rem;
+      margin-bottom: 7px;
+    }
+
+    .video-info h3 {
+      color: var(--creme);
+      font-size: 1.35rem;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .video-info p {
+      color: var(--texte-doux);
+      font-size: 0.92rem;
+    }
+
+    /* ETAPES */
+
+    .etapes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .etape {
+      border-top: 1px solid var(--or);
+      padding: 28px 15px 10px;
+    }
+
+    .etape-numero {
+      color: var(--or);
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      margin-bottom: 13px;
+    }
+
+    .etape h3 {
+      color: var(--creme);
+      font-size: 1.3rem;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .etape p {
+      color: var(--texte-doux);
+      font-size: 0.94rem;
+    }
+
+    /* SUR MESURE */
+
+    .sur-mesure-box {
+      max-width: 920px;
+      margin: auto;
+      padding: 55px;
+      text-align: center;
+      background:
+        linear-gradient(145deg, rgba(216,176,106,0.08), rgba(255,255,255,0.01));
+      border: 1px solid var(--bordure);
+    }
+
+    .sur-mesure-box h2 {
+      color: var(--creme);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .sur-mesure-box p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #b9ac99;
     }
 
     /* CONTACT */
 
     .contact {
-      background: #0d0907;
       text-align: center;
-    }
-
-    .contact-box {
-      max-width: 750px;
-      margin: auto;
-      border: 1px solid rgba(211, 169, 101, .3);
-      padding: 55px 30px;
-    }
-
-    .contact h2 {
-      color: #efd5a7;
-      font-size: 44px;
-      font-weight: normal;
-      margin-bottom: 15px;
     }
 
     .contact p {
-      color: #bcae9d;
-      margin-bottom: 28px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: var(--texte-doux);
     }
+
+    /* FOOTER */
 
     footer {
-      background: #090604;
-      border-top: 1px solid rgba(211, 169, 101, .2);
+      padding: 42px 0;
+      border-top: 1px solid var(--bordure);
       text-align: center;
-      padding: 30px 20px;
-      color: #827568;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
+      color: #817563;
+      font-size: 0.86rem;
     }
 
-    /* TELEPHONE */
+    .footer-logo {
+      color: var(--or-clair);
+      letter-spacing: 4px;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
 
-    @media (max-width: 800px) {
+    /* TELEPHONE / TABLETTE */
 
-      nav {
-        flex-direction: column;
-        padding: 18px;
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 14px;
       }
 
-      .menu {
-        margin-top: 14px;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .hero {
-        min-height: 78vh;
-      }
-
-      .cards,
-      .features {
+      .presentation {
         grid-template-columns: 1fr;
       }
 
-      .card {
-        min-height: 300px;
+      .presentation-photo img {
+        height: 480px;
       }
 
-      section {
-        padding: 70px 18px;
+      .galerie {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: auto;
+      }
+
+      .etapes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      nav {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 15px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .hero-content {
+        padding: 65px 0;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .creation-grid,
+      .galerie,
+      .etapes {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        height: 470px;
+      }
+
+      .sur-mesure-box {
+        padding: 40px 22px;
+      }
+
+      .presentation-photo img {
+        height: 430px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
-<header>
-  <nav>
-    <a href="#accueil" class="logo">Shambhala</a>
+  <!-- MENU -->
 
-    <ul class="menu">
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#creations">Créations</a></li>
-      <li><a href="#artisanat">L'artisanat</a></li>
-      <li><a href="#sur-mesure">Sur mesure</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav>
 
-<main>
+      <a href="#accueil" class="logo">
+        SHAMB<span>HALA</span>
+      </a>
 
-  <section class="hero" id="accueil">
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#creations">Créations</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#videos">Vidéos</a></li>
+        <li><a href="#sur-mesure">Sur mesure</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- ACCUEIL -->
+
+  <main id="accueil" class="hero">
+
     <div class="hero-content">
 
-      <div class="hero-small">
-        Créations artisanales
+      <div class="petit-titre">
+        Créations artisanales sur mesure
       </div>
 
       <h1>Shambhala</h1>
 
-      <h2>Nature • Pierres • Bois • Artisanat</h2>
+      <div class="hero-sous-titre">
+        NATURE • PIERRES • BOIS • ARTISANAT
+      </div>
 
       <p>
-        Des pièces faites à la main avec passion,
-        inspirées par la nature, les matières brutes
-        et l'univers minéral.
+        Des créations façonnées à la main, inspirées par la nature,
+        le bois et l'univers minéral. Chaque pièce est réalisée
+        sur mesure pour donner naissance à une création qui vous ressemble.
       </p>
 
-      <a class="btn" href="#creations">
-        Découvrir les créations
-      </a>
+      <div class="boutons">
+
+        <a href="#realisations" class="btn">
+          Découvrir les réalisations
+        </a>
+
+        <a href="#sur-mesure" class="btn btn-contour">
+          Créer ma pièce
+        </a>
+
+      </div>
 
     </div>
-  </section>
+
+  </main>
 
 
-  <section class="creations" id="creations">
+  <!-- PRESENTATION -->
+
+  <section class="section section-sombre">
 
     <div class="container">
 
-      <div class="section-title">
-        <span>L'univers Shambhala</span>
-        <h2>Nos créations artisanales</h2>
+      <div class="presentation">
+
+        <div class="presentation-photo">
+
+          <img
+            src="800259135_18182770324420746_8219150036893580087_n.jpg"
+            alt="Stand et créations artisanales Shambhala"
+          >
+
+        </div>
+
+
+        <div class="presentation-texte">
+
+          <div class="petit-titre">
+            L'univers Shambhala
+          </div>
+
+          <h2>
+            Des créations qui prennent vie entre bois et pierre
+          </h2>
+
+          <p>
+            Shambhala est un univers de créations artisanales réalisées
+            à la main, inspirées par la nature et les matières brutes.
+          </p>
+
+          <p>
+            Les créations présentées sur ce site sont des exemples
+            de réalisations déjà effectuées. Elles permettent de découvrir
+            mon travail et peuvent servir d'inspiration pour votre propre projet.
+          </p>
+
+          <p>
+            Chaque nouvelle commande est réalisée sur mesure.
+            Les formes, les couleurs, les pierres et les détails
+            peuvent donc varier selon vos envies et les matières disponibles.
+          </p>
+
+          <div class="signature">
+            Fait main • Sur mesure • Chaque création est différente
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CREATIONS SUR MESURE -->
+
+  <section id="creations" class="section">
+
+    <div class="container">
+
+      <div class="titre-section">
+
+        <div class="mini">
+          Commander une création
+        </div>
+
+        <h2>
+          Créations sur mesure
+        </h2>
+
         <p>
-          Chaque création est façonnée à la main.
-          Le bois, les pierres et les formes naturelles rendent
-          chaque pièce différente et unique.
+          Choisissez le type de création qui vous intéresse.
+          Nous définirons ensuite ensemble les détails de votre projet.
         </p>
+
       </div>
 
-      <div class="cards">
 
-        <article class="card">
-          <div class="card-number">01</div>
-          <h3>Pics à cheveux</h3>
+      <div class="creation-grid">
+
+
+        <!-- PIC A CHEVEUX -->
+
+        <article class="creation-card">
+
+          <h3>Pic à cheveux</h3>
+
+          <div class="prix">
+            25 €
+          </div>
+
           <p>
-            Des pièces artisanales en bois ornées de pierres,
-            façonnées pour devenir de véritables bijoux de cheveux.
+            Un pic à cheveux artisanal façonné à la main.
+            Votre création est réalisée spécialement selon le style
+            et l'univers souhaités.
           </p>
+
+          <a href="#sur-mesure" class="btn">
+            Commander sur mesure
+          </a>
+
         </article>
 
-        <article class="card">
-          <div class="card-number">02</div>
-          <h3>Bracelets</h3>
+
+        <!-- BAGUETTE -->
+
+        <article class="creation-card">
+
+          <h3>Baguette magique</h3>
+
+          <div class="prix">
+            45 €
+          </div>
+
           <p>
-            Des créations composées de pierres sélectionnées
-            et assemblées à la main avec soin.
+            Une baguette artisanale créée spécialement pour vous.
+            Chaque réalisation possède sa propre forme,
+            son caractère et ses particularités.
           </p>
+
+          <a href="#sur-mesure" class="btn">
+            Commander sur mesure
+          </a>
+
         </article>
 
-        <article class="card">
-          <div class="card-number">03</div>
-          <h3>Objets & créations</h3>
-          <p>
-            Des pièces singulières inspirées par le bois,
-            les minéraux et l'univers de Shambhala.
-          </p>
-        </article>
+      </div>
+
+
+      <div class="important">
+
+        <strong>À savoir :</strong>
+        les photographies et vidéos présentées sur ce site montrent
+        des exemples de créations déjà réalisées.
+
+        Elles ne correspondent pas à des articles fabriqués en série.
+        Votre création sera réalisée spécialement pour vous.
 
       </div>
 
@@ -454,93 +825,390 @@
   </section>
 
 
-  <section class="artisanat" id="artisanat">
+  <!-- GALERIE -->
+
+  <section id="realisations" class="section section-sombre">
 
     <div class="container">
 
-      <div class="section-title">
-        <span>Notre philosophie</span>
-        <h2>Un véritable travail artisanal</h2>
-      </div>
+      <div class="titre-section">
 
-      <div class="features">
-
-        <div class="feature">
-          <div class="feature-icon">♡</div>
-          <h3>Fait main</h3>
-          <p>
-            Chaque pièce est réalisée avec patience,
-            passion et attention portée aux détails.
-          </p>
+        <div class="mini">
+          Galerie
         </div>
 
-        <div class="feature">
-          <div class="feature-icon">❧</div>
-          <h3>Matières naturelles</h3>
-          <p>
-            Le bois et les pierres naturelles occupent
-            une place centrale dans nos créations.
-          </p>
-        </div>
+        <h2>
+          Quelques réalisations
+        </h2>
 
-        <div class="feature">
-          <div class="feature-icon">✦</div>
-          <h3>Pièces uniques</h3>
-          <p>
-            Les nuances du bois et des pierres font
-            qu'aucune création ne ressemble exactement à une autre.
-          </p>
-        </div>
+        <p>
+          Découvrez quelques exemples de créations Shambhala.
+          Elles témoignent du travail artisanal et peuvent vous inspirer
+          pour imaginer votre future création.
+        </p>
 
       </div>
 
-    </div>
 
-  </section>
+      <div class="galerie">
 
 
-  <section class="sur-mesure" id="sur-mesure">
+        <div class="photo">
 
-    <div class="container">
+          <img
+            src="787082836_18180086056420746_3591716075462967266_n.jpg"
+            alt="Pics à cheveux artisanaux Shambhala"
+            loading="lazy"
+          >
 
-      <div class="hero-small">
-        Une création rien que pour vous
+          <div class="legende">
+            <span>Réalisation</span>
+            Pics à cheveux artisanaux
+          </div>
+
+        </div>
+
+
+        <div class="photo">
+
+          <img
+            src="788837894_18180103387420746_1500470155326912202_n.jpg"
+            alt="Créations artisanales Shambhala en bois et pierres"
+            loading="lazy"
+          >
+
+          <div class="legende">
+            <span>Réalisation</span>
+            Bois & pierres
+          </div>
+
+        </div>
+
+
+        <div class="photo">
+
+          <img
+            src="792053315_18180774424420746_6771735087563415465_n.jpg"
+            alt="Détail d'une création artisanale Shambhala"
+            loading="lazy"
+          >
+
+          <div class="legende">
+            <span>Détail</span>
+            Travail artisanal
+          </div>
+
+        </div>
+
+
+        <div class="photo">
+
+          <img
+            src="684274228_980696734436569_4797461055335610192_n.jpg"
+            alt="Création en bois Shambhala"
+            loading="lazy"
+          >
+
+          <div class="legende">
+            <span>Réalisation</span>
+            Création en bois
+          </div>
+
+        </div>
+
+
+        <div class="photo">
+
+          <img
+            src="791129778_2551504938697551_9072663552418844903_n.jpg"
+            alt="Création Shambhala façonnée à la main"
+            loading="lazy"
+          >
+
+          <div class="legende">
+            <span>Réalisation</span>
+            Pièce façonnée à la main
+          </div>
+
+        </div>
+
+
+        <div class="photo">
+
+          <img
+            src="821103725_1402803105375391_4961588077829033458_n.jpg"
+            alt="Création artisanale Shambhala avec pierre"
+            loading="lazy"
+          >
+
+          <div class="legende">
+            <span>Réalisation</span>
+            Bois & univers minéral
+          </div>
+
+        </div>
+
       </div>
 
-      <h2>Créations sur demande</h2>
 
-      <p>
-        Vous avez une idée, une envie ou souhaitez une pièce particulière ?
-        Nous pouvons imaginer ensemble une création personnalisée
-        dans l'univers Shambhala.
+      <p class="note-galerie">
+        Ces créations sont présentées à titre d'exemple.
+        Chaque nouvelle pièce est réalisée spécialement
+        en fonction du projet et des matières disponibles.
       </p>
 
-      <a class="btn" href="#contact">
-        Nous contacter
-      </a>
+    </div>
+
+  </section>
+
+
+  <!-- VIDEOS -->
+
+  <section id="videos" class="section">
+
+    <div class="container">
+
+      <div class="titre-section">
+
+        <div class="mini">
+          Présentations vidéo
+        </div>
+
+        <h2>
+          Découvrez les créations sous tous les angles
+        </h2>
+
+        <p>
+          Les vidéos permettent de mieux apprécier la taille,
+          les formes, les détails du bois, les pierres
+          et les finitions de différentes réalisations Shambhala.
+        </p>
+
+      </div>
+
+
+      <div class="video-grid">
+
+
+        <!-- VIDEO 1 -->
+
+        <article class="video-card">
+
+          <video controls playsinline preload="metadata">
+            <source src="28631.mp4" type="video/mp4">
+            Votre navigateur ne peut pas lire cette vidéo.
+          </video>
+
+          <div class="video-info">
+
+            <div class="numero">
+              Présentation 01
+            </div>
+
+            <h3>
+              Création Shambhala
+            </h3>
+
+            <p>
+              Découvrez cette réalisation en vidéo
+              afin d'en observer les proportions et les détails.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- VIDEO 2 -->
+
+        <article class="video-card">
+
+          <video controls playsinline preload="metadata">
+            <source src="28635.mp4" type="video/mp4">
+            Votre navigateur ne peut pas lire cette vidéo.
+          </video>
+
+          <div class="video-info">
+
+            <div class="numero">
+              Présentation 02
+            </div>
+
+            <h3>
+              Le travail artisanal
+            </h3>
+
+            <p>
+              Une présentation permettant de découvrir
+              la création sous différents angles.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- VIDEO 3 -->
+
+        <article class="video-card">
+
+          <video controls playsinline preload="metadata">
+            <source src="28636.mp4" type="video/mp4">
+            Votre navigateur ne peut pas lire cette vidéo.
+          </video>
+
+          <div class="video-info">
+
+            <div class="numero">
+              Présentation 03
+            </div>
+
+            <h3>
+              Détails & finitions
+            </h3>
+
+            <p>
+              Une autre réalisation Shambhala présentée
+              pour mieux apprécier ses dimensions et ses finitions.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
 
     </div>
 
   </section>
 
 
-  <section class="contact" id="contact">
+  <!-- COMMENT COMMANDER -->
+
+  <section class="section section-sombre">
 
     <div class="container">
 
-      <div class="contact-box">
+      <div class="titre-section">
 
-        <div class="hero-small">Shambhala</div>
+        <div class="mini">
+          Votre projet
+        </div>
 
-        <h2>Une création vous plaît ?</h2>
+        <h2>
+          Comment se déroule une commande ?
+        </h2>
+
+      </div>
+
+
+      <div class="etapes">
+
+
+        <div class="etape">
+
+          <div class="etape-numero">
+            ÉTAPE 01
+          </div>
+
+          <h3>
+            Choisissez
+          </h3>
+
+          <p>
+            Choisissez le type de création que vous souhaitez faire réaliser.
+          </p>
+
+        </div>
+
+
+        <div class="etape">
+
+          <div class="etape-numero">
+            ÉTAPE 02
+          </div>
+
+          <h3>
+            Imaginez
+          </h3>
+
+          <p>
+            Expliquez vos envies, vos couleurs,
+            votre style et l'inspiration recherchée.
+          </p>
+
+        </div>
+
+
+        <div class="etape">
+
+          <div class="etape-numero">
+            ÉTAPE 03
+          </div>
+
+          <h3>
+            Création
+          </h3>
+
+          <p>
+            Votre pièce est ensuite façonnée artisanalement
+            et spécialement pour vous.
+          </p>
+
+        </div>
+
+
+        <div class="etape">
+
+          <div class="etape-numero">
+            ÉTAPE 04
+          </div>
+
+          <h3>
+            Votre Shambhala
+          </h3>
+
+          <p>
+            Vous recevez votre création personnalisée,
+            différente de toutes les autres.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SUR MESURE -->
+
+  <section id="sur-mesure" class="section">
+
+    <div class="container">
+
+      <div class="sur-mesure-box">
+
+        <div class="petit-titre">
+          Création personnalisée
+        </div>
+
+        <h2>
+          Imaginons votre création
+        </h2>
 
         <p>
-          Pour connaître les créations disponibles ou discuter
-          d'une création personnalisée, contactez-nous directement.
+          Vous avez découvert une réalisation qui vous inspire ?
+          Vous souhaitez une couleur, une pierre, une forme
+          ou une ambiance particulière ?
+
+          Contactez-moi afin que nous définissions ensemble
+          votre projet personnalisé.
         </p>
 
-        <a class="btn" href="#">
-          Nous contacter
+        <a href="#contact" class="btn">
+          Demander ma création
         </a>
 
       </div>
@@ -549,12 +1217,71 @@
 
   </section>
 
-</main>
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="section section-sombre">
+
+    <div class="container contact">
+
+      <div class="titre-section">
+
+        <div class="mini">
+          Contact
+        </div>
+
+        <h2>
+          Parlons de votre projet
+        </h2>
+
+        <p>
+          Pour une création sur mesure, indiquez le type
+          de création souhaité ainsi que vos idées,
+          vos préférences et vos inspirations.
+        </p>
+
+      </div>
 
 
-<footer>
-  © 2026 Shambhala — Créations artisanales • Tous droits réservés
-</footer>
+      <!--
+        PROCHAINE ETAPE :
+        nous ajouterons ici tes coordonnées,
+        tes réseaux sociaux et le système permettant
+        de passer une vraie commande.
+      -->
+
+
+      <a href="#creations" class="btn">
+        Voir les créations
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PIED DE PAGE -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-logo">
+        SHAMBHALA
+      </div>
+
+      <p>
+        Créations artisanales • Bois • Pierres • Sur mesure
+      </p>
+
+      <p>
+        © 2026 Shambhala — Tous droits réservés
+      </p>
+
+    </div>
+
+  </footer>
+
 
 </body>
 </html>
